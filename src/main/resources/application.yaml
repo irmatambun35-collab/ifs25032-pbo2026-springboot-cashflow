@@ -10,7 +10,8 @@ spring:
       enabled: true
 
 server:
-  port: ${APP_PORT:8080}
+  port: ${PORT:${APP_PORT:8080}}
+  forward-headers-strategy: framework
 
 vaadin:
   launch-browser: false
